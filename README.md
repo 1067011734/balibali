@@ -1,35 +1,38 @@
-# ???? ?2018-9-24?
- ?????????????????
+# 叭哩叭哩（2018-9-24）
+ 走过路过千万不要错过，欢迎star!
 
- ### 1.????:
-![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/20170518152848.png)
-![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/20170518152848.png)
+ ### 1.页面展示:
+![Image text](https://github.com/1067011734/koa-balibali/blob/master/public/tools/demo/1.png)
+![Image text](https://github.com/1067011734/koa-balibali/blob/master/public/tools/demo/2.png)
+![Image text](https://github.com/1067011734/koa-balibali/blob/master/public/tools/demo/3.png)
+![Image text](https://github.com/1067011734/koa-balibali/blob/master/public/tools/demo/4.png)
+![Image text](https://github.com/1067011734/koa-balibali/blob/master/public/tools/demo/5.png)
 
- ### 2.???:
+ ### 2.技术栈:
  * [ant-desin-pro(react+redux+react-router+webpack+dva)](https://pro.ant.design/index-cn)
  * [ant-mobile](https://antd-mobile.gitee.io/kitchen-sink/?lang=zh-CN)
 
- ### 3.??:
+ ### 3.项目功能:
  ```
-- ??
-  --???
-  -- ???
-  -- ???
-- ??
-  - - ????
-- ??
-  -- ??
-- ??
-  -- ??
-- ???
-  -- ??????
-  -- ??????
-  -- ??????
-  -- ??????
-  -- ??
+- 首页
+  --公告
+  -- 轮播图
+  -- 九宫布局
+- 地图
+  ---百度地图
+- 收藏
+  -- 列表展示
+- 登录
+  -- form表单
+- 侧边栏
+  -- 个人信息展示
+  -- 修改基本信息
+  -- 修改个性标签
+  -- 上传头像
+  -- 登出
 ```
  ### 4.sdk:
- [????](https://antd-mobile.gitee.io/kitchen-sink/?lang=zh-CN)
+ [app下载(适合安卓)](hhttps://github.com/1067011734/koa-balibali/blob/master/public/tools/sdk/%E5%8F%AD%E5%93%A9%E5%8F%AD%E5%93%A9.apk)
 
  -----
-??????????
+继续敲代码中......
