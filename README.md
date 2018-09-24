@@ -32,7 +32,7 @@
   -- 登出
 ```
  ### 4.sdk:
- [app下载(适合安卓)](hhttps://github.com/1067011734/koa-balibali/blob/master/public/tools/sdk/%E5%8F%AD%E5%93%A9%E5%8F%AD%E5%93%A9.apk)
+ [app下载(适合安卓,打开地址后点击"View Raw"即可下载)](https://github.com/1067011734/koa-balibali/blob/master/public/tools/sdk/%E5%8F%AD%E5%93%A9%E5%8F%AD%E5%93%A9.apk)
 
  -----
 继续敲代码中......
