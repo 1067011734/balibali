@@ -1,0 +1,49 @@
+@import '~@/utils/utils.less';
+.nav{
+  p{
+    margin: 0;
+  }
+  .nav-header{
+    flex: 2;
+    background-color: @color-primary;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    .avatar{
+     background-color: #fff;
+     width: 60px;
+     height: 60px;
+     border-radius: 50%;
+    }
+    p{
+      padding-top: 5px;
+    }
+   }
+   .nav-content{
+     flex: 5;
+     background: #fff;
+     padding-left: @padding-base;
+     p{
+      margin-top: @padding-base;
+       span{
+         margin-left: @margin-base;
+       }
+     }
+   }
+   .nav-footer{
+     flex: 2;
+     background: #fff;
+     padding-left: @padding-base;
+     .nav-footer-body{
+       border-top: 1px solid @color-border;
+       p{
+        margin-top: @padding-base;
+         span{
+           margin-left: @margin-base;
+         }
+       }
+     }
+   }
+}

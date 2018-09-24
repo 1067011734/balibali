@@ -1,0 +1,35 @@
+@import '~@/utils/utils.less';
+:global(.transitionWrapper-enter) {
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 10000;
+  opacity: 1;
+  transform: translateX(100%);
+}
+
+:global(.transitionWrapper-enter.transitionWrapper-enter-active) {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.4s ease-out;
+}
+
+:global(.transitionWrapper-leave) {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+:global(.transitionWrapper-leave.transitionWrapper-leave-active) {
+  opacity: 1;
+  transform: translateX(-100%);
+  transition: all 0.4s ease-out;
+}
+
+.transitionWrapper {
+  position: relative;
+  display: flex;
+  flex: 1;
+}
