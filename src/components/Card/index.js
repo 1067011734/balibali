@@ -43,14 +43,14 @@ close=()=>{
       return (
         <div className={style["card-wrap"]}>
           {
-          cardList.map(x=>(
-            <div className={style.card}>
+          cardList.map((x,index)=>(
+            <div className={style.card} key={index}>
               <div className="card-img">
                 <img src={x.src} alt="" />
               </div>
-              <card className="title">
+              <div className="title">
                 {x.title}
-              </card>
+              </div>
             </div>
           ))
         }

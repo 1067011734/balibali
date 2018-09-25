@@ -37,7 +37,7 @@ componentDidUpdate() {
   render() {
     const {location,children} =this.props
     const {pathname} =location
-    // console.info(this.props)
+    console.info(this.props)
     const key = (pathname!=="/user")?'':"pathname"
       return (
         <ReactCSSTransitionGroup
@@ -49,7 +49,7 @@ componentDidUpdate() {
           // transitionLeave={false}
         >
           {/* 用key控制滑动权限----- 苍天啊 */}
-          <div key={key} className={`${pathname} translation-content`}>
+          <div key={pathname} className={`${pathname} translation-content`}>
             {children}
           </div>
         </ReactCSSTransitionGroup>
