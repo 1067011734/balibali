@@ -17,8 +17,10 @@ const {Step} = Steps
 class app extends Component {
     state = {
       userInfo:{
-        name:'',// ??
-        dept:'',// ??
+        name:'', // 姓名
+        dept:'', // 所属部门
+        person:[], //个性标签
+        avatar:"" //头像
       },
       stepNumber:1,
     }

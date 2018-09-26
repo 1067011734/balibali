@@ -15,41 +15,26 @@ import '@/styles/base.less'
 }))
 class app extends Component {
   state = {
-    navLeftVisibility: false,
+    // navLeftVisibility: false,
   }
 
   componentDidMount(){
     
   }
 
-  navLeftCLose=()=>{
-    this.setState({navLeftVisibility: false})
-  }
-
   render() {
-    const {navLeftVisibility} =  this.state
     return (
       <>
         <div className="page">
-          <Header
-            onClose={()=>{
-              this.setState({navLeftVisibility: true})
-            }} 
-          />
-          {/* <WhiteSpace /> */}
+          <Header/>
           <div className="page-content">
-            {/* <Transiton {...this.props}> */}
             {this.props.children}
-            {/* </Transiton> */}
           </div>
           <div className="page-footer">
             <Footer {...this.props} />
           </div>
         </div>
-        <NavLeft 
-          visibility={navLeftVisibility}
-          onClose={this.navLeftCLose}
-          {...this.props}
+        <NavLeft {...this.props}
         />
       </>
     )

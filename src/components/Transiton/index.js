@@ -35,21 +35,24 @@ componentDidUpdate() {
 }
 
   render() {
-    const {location,children} =this.props
+    const {location,children,history} =this.props
+    const {action} =history
+    //goback:pop,push:push
+    const className = action==='POP'?'translation-arrow-right':'translation-arrow-left'
+    // const className = 'translation-arrow-left'
     const {pathname} =location
-    console.info(this.props)
     const key = (pathname!=="/user")?'':"pathname"
       return (
         <ReactCSSTransitionGroup
           component="div"
-          className="translation-left"
+          className={`translation-wrap ${className}`}
           transitionName="translation"
           transitionEnterTimeout={300}
           transitionLeaveTimeout={300}
           // transitionLeave={false}
         >
           {/* 用key控制滑动权限----- 苍天啊 */}
-          <div key={pathname} className={`${pathname} translation-content`}>
+          <div key={key} className={`${pathname} translation-content`}>
             {children}
           </div>
         </ReactCSSTransitionGroup>

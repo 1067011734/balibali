@@ -11,12 +11,12 @@ import style from './index.less'
 
 const {alert} = Modal
 @connect(({ common }) => ({
-  userInfo:common.userInfo
+  userInfo:common.userInfo,
+  open:common.navLeftVisible,
 }))
 class app extends Component {
   PropTypes={
-    onClose: PropTypes.func,
-    visibility:PropTypes.bool,
+    open:PropTypes.bool,
   }
 
     state = {
@@ -27,15 +27,18 @@ componentDidMount(){
 }
 
   componentWillReceiveProps(nextProps){
-    const {visibility} = nextProps
-    if(visibility!==this.state.visibility){
-      this.setState({visibility})
-    }
+    // const {visibility} = nextProps
+    // if(visibility!==this.state.visibility){
+    //   this.setState({visibility})
+    // }
   }
 
   drawerClose=()=>{
-    this.setState({visibility:false})
-    this.props.onClose()
+    const  {dispatch} = this.props
+    dispatch({
+      type: 'common/updateNavLeftVisible',
+      payload: false,
+    })
   }
 
   logout=()=>{
@@ -48,19 +51,28 @@ componentDidMount(){
   }
 
   updateUserInfo=()=>{
-    this.setState({visibility:false},()=>{
-      // router.push('/user')
-      this.props.history.push({pathname:'/user'})
-    }
-  )
+  //   this.setState({visibility:false},()=>{
+  //     // router.push('/user')
+  //     this.props.history.push({pathname:'/user'})
+  //   }
+  // )
+      const  {dispatch,history} = this.props
+      dispatch({
+        type: 'common/updateNavLeftVisible',
+        payload: false,
+      })
+      // .then(()=>{
+      //   debugger
+      //   history.push({pathname:'/user'})
+      // })
+      history.push({pathname:'/user'})
   }
 
     render() {
-      const {onClose,userInfo} = this.props
-      const {visibility} = this.state
+      const {onClose,userInfo,open} = this.props
         return (
           <Drawer 
-            open={visibility}
+            open={open}
             onClose={this.drawerClose}
           >
             <div className={`page ${style.nav}`}>
