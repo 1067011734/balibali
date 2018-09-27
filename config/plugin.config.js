@@ -25,4 +25,6 @@ export default config => {
       indexFileName: 'index.html',
     },
   ]);
+  // alias配置
+  config.resolve.alias.set('@regularConfig', path.join(__dirname, '../src/utils/regularConfig.js'));
 };

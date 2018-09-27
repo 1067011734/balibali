@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import { InputItem,Button, WhiteSpace, Toast } from 'antd-mobile'
 import { createForm } from 'rc-form'
 import { connect } from 'dva'
-import '@/styles/base.less'
-
+import {loginReg} from '@regularConfig'
 @createForm()
 @connect(({ login, loading }) => ({
     login,
@@ -14,9 +13,11 @@ class app extends Component {
     }
 
     submit = () => {
+        const { getFieldProps, getFieldError } = this.props.form
         this.props.form.validateFields((error, values) => {
           if(error){
-            Toast.info('请正确填写 !!!', 1);
+            const msg = `请输入${getFieldError('user')||''}${getFieldError('password')||''}` 
+            Toast.info(msg, 1);
             return
           }
             this.props.history.push({pathname:'/home'})
@@ -29,9 +30,16 @@ class app extends Component {
             //   })
         })
     }
-
+    normalize=(val, prev) => {
+      if(!loginReg.test(val)){
+        Toast.info('不能包含中文和大写', 1);
+        return prev
+      }
+      return val
+  }
     render() {
-        const { getFieldProps, getFieldError } = this.props.form
+        let errors
+        const { getFieldProps } = this.props.form
         return (
           <div className="page">
             <InputItem
@@ -41,10 +49,8 @@ class app extends Component {
               minLength="4"
               clear
               {...getFieldProps('user', {
-                        rules: [{ required: true, message: 'admin',}],
-                        // normalize: (val, prev) => {
-
-                        // }
+                        rules: [{ required: true, message: '账号',}],
+                        normalize: this.normalize,
                     })}
             >账号:
             </InputItem>
@@ -54,10 +60,8 @@ class app extends Component {
               maxLength="10"
               clear
               {...getFieldProps('password', {
-                        rules: [{ required: true, message: 'admin', }],
-                        // normalize: (val, prev) => {
-
-                        // }
+                        rules: [{ required: true, message: '密码', }],
+                        normalize: this.normalize
                     })}
             >密码:
             </InputItem>

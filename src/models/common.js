@@ -7,7 +7,7 @@ export default {
 
   state: {
     userInfo:{
-      name:'隔壁小马', // 姓名
+      name:'隔壁小马哥', // 姓名
       dept:'前端攻城狮', // 所属部门
       person:["思想良好", "积极向上", "对工作积极", "严格要求自己", "有强烈的责任心"],//个性标签
       avatar:avataSrc,//头像

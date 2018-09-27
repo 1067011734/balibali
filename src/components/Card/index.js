@@ -1,31 +1,20 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import img from '@/images/moon.png'
 import style from './index.less'
 
 class app extends Component {
   PropTypes={
-    open: PropTypes.bool,
-    onClose: PropTypes.func,
+    list: PropTypes.array,
+    className:PropTypes.string,
+  }
+  static defaultProps ={
+    list :[],
   }
 
   state = {
-    cardList:[
-      {title:'团员中秋',src:img},
-      {title:'团员中秋',src:img},
-      {title:'团员中秋',src:img},
-      {title:'团员中秋',src:img},
-      {title:'团员中秋',src:img},
-      {title:'团员中秋',src:img},
-      {title:'团员中秋',src:img},
-      {title:'团员中秋',src:img},
-      {title:'团员中秋',src:img},
-      {title:'团员中秋',src:img},
-      {title:'团员中秋',src:img},
-      {title:'团员中秋',src:img},
-    ]
   }
-
+componentDidMount(){
+}
 componentWillReceiveProps(nextProps){
   const {open} = nextProps
   if(open!=this.state.open){
@@ -39,11 +28,11 @@ close=()=>{
 }
 
   render() {
-    const {cardList} = this.state
+    const {list,className} = this.props
       return (
-        <div className={style["card-wrap"]}>
+        <div className={`${style["card-wrap"]} ${className}`}>
           {
-          cardList.map((x,index)=>(
+          list.map((x,index)=>(
             <div className={style.card} key={index}>
               <div className="card-img">
                 <img src={x.src} alt="" />

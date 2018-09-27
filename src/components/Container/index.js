@@ -8,7 +8,6 @@ import View from '@/components/View'
 class app extends Component {
   PropTypes={
     title: PropTypes.string,
-    visibility: PropTypes.bool,
   }
 
   state = {
@@ -21,12 +20,10 @@ class app extends Component {
   render() {
     const {onClose,title} = this.props
       return (
-        // <View>
         <div className="page">
           <div className="page-header">
             <NavBar
               mode="left"
-              // icon={<Icon type="left" />}
               leftContent={<img src={img} alt="" className="icon" onClick={this.back} />}
               onLeftClick={onClose}
             >{title}
@@ -37,7 +34,6 @@ class app extends Component {
             {this.props.children}
           </div>
         </div>
-        // </View>
       )
   }
 }

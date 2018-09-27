@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'dva'
-import Transiton from '@/components/Transiton'
+import Transiton from '@/components/Transition'
 import '@/styles/base.less'
 
 class app extends Component {
@@ -13,22 +13,10 @@ class app extends Component {
 
 
   render() {
-    // console.info(this.props)
-    // const {location} = this.props
     return (
-      // <div className="page">
-      //   {this.props.children}
-      // </div>
-      // <>
-      //   {location.pathname==="/user"?(
       <Transiton {...this.props}>
         {this.props.children}
       </Transiton>
-      // ):this.props.children}
-      // </>
-      // <Transiton {...this.props}>
-        
-      // </Transiton>
     )
   }
 }
