@@ -45,6 +45,11 @@ componentDidMount(){
     alert('退出登录', '你确定要退出吗?', [
       { text: '取消', onPress: () => console.log('cancel') },
       { text: '确定', onPress: () => {
+        const  {dispatch} = this.props
+        dispatch({
+          type: 'common/updateNavLeftVisible',
+          payload: false,
+        })
         router.push(({pathname:'/login'}))
       } },
     ])
