@@ -62,7 +62,7 @@ changeData=(data,key)=>{
         type: 'common/updateUserInfo',
         payload: params,
       })
-      router.push({pathname:'/home'})
+      router.goBack()
      return
    }
    this.setState({
