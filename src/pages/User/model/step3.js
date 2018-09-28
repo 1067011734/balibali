@@ -21,8 +21,7 @@ componentDidMount(){
 
 onSubmit = () => {
   const {files} = this.state
-  console.info(files,'files')
-    this.props.onChange({avatar:files[0].url},3)
+    this.props.onChange({avatar:files[0]?files[0].url:''},3)
 }
 
 onChange = (files, type, index) => {
