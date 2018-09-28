@@ -3,12 +3,12 @@
  [<h1>线上地址(http://localhost:8880/balibali/index.html#/home)</h1>](http://localhost:8880/balibali/index.html#/home)
 
  ### 1.页面展示:
-![Image text](https://github.com/1067011734/koa-balibali/blob/master/public/tools/demo/1.png)
-![Image text](https://github.com/1067011734/koa-balibali/blob/master/public/tools/demo/2.png)
-![Image text](https://github.com/1067011734/koa-balibali/blob/master/public/tools/demo/3.png)
-![Image text](https://github.com/1067011734/koa-balibali/blob/master/public/tools/demo/4.png)
-![Image text](https://github.com/1067011734/koa-balibali/blob/master/public/tools/demo/5.png)
-![Image text](https://github.com/1067011734/koa-balibali/blob/master/public/tools/demo/6.png)
+![Image text](https://github.com/1067011734/balibali/blob/master/tools/demo/1.png)
+![Image text](https://github.com/1067011734/balibali/blob/master/tools/demo/2.png)
+![Image text](https://github.com/1067011734/balibali/blob/master/tools/demo/3.png)
+![Image text](https://github.com/1067011734/balibali/blob/master/tools/demo/4.png)
+![Image text](https://github.com/1067011734/balibali/blob/master/tools/demo/5.png)
+![Image text](https://github.com/1067011734/balibali/blob/master/tools/demo/6.png)
 
  ### 2.技术栈:
  * [ant-desin-pro(react+redux+react-router+webpack+dva)](https://pro.ant.design/index-cn)
