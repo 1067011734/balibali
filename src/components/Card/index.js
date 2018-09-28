@@ -16,10 +16,6 @@ class app extends Component {
 componentDidMount(){
 }
 componentWillReceiveProps(nextProps){
-  const {open} = nextProps
-  if(open!=this.state.open){
-    this.setState({open})
-  }
 }
 
 close=()=>{
