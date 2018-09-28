@@ -1,6 +1,6 @@
 # 叭哩叭哩（2018-9-28）
  走过路过千万不要错过，欢迎star!
- [<h1>线上地址(http://localhost:8880/balibali/index.html#/home)</h1>](http://localhost:8880/balibali/index.html#/home)
+ [<h1>线上地址(http://47.98.158.164:8880/balibali/index.html#/home)</h1>](http://47.98.158.164:8880/balibali/index.html#/home)
 
  ### 1.页面展示:
 ![Image text](https://github.com/1067011734/balibali/blob/master/tools/demo/1.png)
