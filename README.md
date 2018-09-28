@@ -8,7 +8,7 @@
 ![Image text](https://github.com/1067011734/koa-balibali/blob/master/public/tools/demo/3.png)
 ![Image text](https://github.com/1067011734/koa-balibali/blob/master/public/tools/demo/4.png)
 ![Image text](https://github.com/1067011734/koa-balibali/blob/master/public/tools/demo/5.png)
-![Image text](https://github.com/1067011734/koa-balibali/blob/master/public/tools/demo/5.png)
+![Image text](https://github.com/1067011734/koa-balibali/blob/master/public/tools/demo/6.png)
 
  ### 2.技术栈:
  * [ant-desin-pro(react+redux+react-router+webpack+dva)](https://pro.ant.design/index-cn)
