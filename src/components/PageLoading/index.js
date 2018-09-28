@@ -8,9 +8,9 @@ export default () => (
   <div style={{ paddingTop: 100, textAlign: 'center' }}>
     {/* <Spin size="large" /> */}
     {
-      Toast.loading('Loading...', 1, () => {
-        console.log('Load complete !!!');
-      })
+      // Toast.loading('Loading...', 1, () => {
+      //   console.log('Load complete !!!');
+      // })
     }
   </div>
 );
