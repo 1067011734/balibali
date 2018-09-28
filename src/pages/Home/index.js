@@ -30,7 +30,7 @@ class app extends Component {
           {title}
         </NoticeBar>
         <Carousel />
-        <Card list={this.cardList} className="flex-column"/>
+        <Card list={this.cardList}/>
       </div>
     )
   }

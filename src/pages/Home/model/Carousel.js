@@ -14,7 +14,7 @@ class app extends Component {
     // simulate img loading
     setTimeout(() => {
       this.setState({
-        data: [img,img2,img3],
+        data: [img, img2, img3],
       });
     }, 100);
   }
@@ -27,7 +27,7 @@ class app extends Component {
         beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
         afterChange={index => console.log('slide to', index)}
       >
-        {this.state.data.map((val,index) => (
+        {this.state.data.map((val, index) => (
           <a
             key={index}
             style={{ display: 'inline-block', width: '100%', height: this.state.imgHeight }}
@@ -35,16 +35,16 @@ class app extends Component {
             <img
               src={val}
               alt="val"
-              style={{ width: '100%', verticalAlign: 'top' , height: this.state.imgHeight}}
+              style={{ width: '100%', verticalAlign: 'top', height: this.state.imgHeight }}
               onLoad={() => {
-                  // fire window resize event to change height
-                  // 不要用，容易早层carousel占满屏幕
-                  // window.dispatchEvent(new Event('resize'));
-                  // this.setState({ imgHeight: 'auto' });
-                }}
+                // fire window resize event to change height
+                // 若用非手机模式打开，imgheight会因为整个浏览器的长度100%自适应造成100%全屏，手机模式加载则没影响
+                window.dispatchEvent(new Event('resize'));
+                this.setState({ imgHeight: 'auto' })
+              }}
             />
           </a>
-          ))}
+        ))}
       </Carousel>
     )
   }
