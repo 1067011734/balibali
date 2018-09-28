@@ -35,11 +35,12 @@ class app extends Component {
             <img
               src={val}
               alt="val"
-              style={{ width: '100%', verticalAlign: 'top' }}
+              style={{ width: '100%', verticalAlign: 'top' , height: this.state.imgHeight}}
               onLoad={() => {
                   // fire window resize event to change height
-                  window.dispatchEvent(new Event('resize'));
-                  this.setState({ imgHeight: 'auto' });
+                  // 不要用，容易早层carousel占满屏幕
+                  // window.dispatchEvent(new Event('resize'));
+                  // this.setState({ imgHeight: 'auto' });
                 }}
             />
           </a>
