@@ -24,14 +24,14 @@ class app extends Component {
         Toast.info(msg, 1);
         return
       }
-      this.props.history.push({ pathname: '/home' })
-      // const { dispatch } = this.props
-      // dispatch({
-      //     type: 'common/login',
-      //     payload: {
-      //       ...values,
-      //     },
-      //   })
+      // this.props.history.push({ pathname: '/home' })
+      const { dispatch } = this.props
+      dispatch({
+          type: 'common/login',
+          payload: {
+            ...values,
+          },
+        })
     })
   }
   normalize = (val, prev) => {

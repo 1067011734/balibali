@@ -95,6 +95,13 @@ export default {
   cssnano: {
     mergeRules: false,
   },
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:8880/",
+      "changeOrigin": true,
+      "pathRewrite": { "^/api" : "" }
+    }
+  },
   publicPath:'./',
   history: 'hash',
 };
